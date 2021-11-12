@@ -1,6 +1,12 @@
 import "./style.css";
 import * as THREE from "three";
 import bgURL from "./bg.jpeg";
+import selfieURL from "./selfie.jpeg";
+import nextURL from "./next.jpeg";
+import jsURL from "./js.png";
+import reduxURL from "./redux.png";
+import tailwindURL from "./tailwind.png";
+import reactURL from "./react.png";
 
 // Setup
 
@@ -42,12 +48,12 @@ scene.add(pointLight, ambientLight);
 
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load("bg.jpeg");
+const spaceTexture = new THREE.TextureLoader().load(bgURL);
 scene.background = spaceTexture;
 
 // Avatar
 
-const meTexture = new THREE.TextureLoader().load("selfie.jpeg");
+const meTexture = new THREE.TextureLoader().load(selfieURL);
 
 const me = new THREE.Mesh(
   new THREE.BoxGeometry(3, 3, 3),
@@ -58,7 +64,7 @@ const me = new THREE.Mesh(
 
 scene.add(me);
 
-const cssTexture = new THREE.TextureLoader().load("tailwind.png");
+const cssTexture = new THREE.TextureLoader().load(tailwindURL);
 const css = new THREE.Mesh(
   new THREE.BoxGeometry(2, 2, 2),
   new THREE.MeshBasicMaterial({ map: cssTexture })
@@ -69,7 +75,7 @@ css.position.y = 5;
 css.position.z = 20;
 css.position.x = 1;
 
-const htmlTexture = new THREE.TextureLoader().load("redux.png");
+const htmlTexture = new THREE.TextureLoader().load(reduxURL);
 const html = new THREE.Mesh(
   new THREE.BoxGeometry(2, 2, 2),
   new THREE.MeshBasicMaterial({ map: htmlTexture })
@@ -80,7 +86,7 @@ html.position.y = 0;
 html.position.x = -4.5;
 html.position.z = 20;
 
-const jsTexture = new THREE.TextureLoader().load("js.png");
+const jsTexture = new THREE.TextureLoader().load(jsURL);
 const js = new THREE.Mesh(
   new THREE.BoxGeometry(2, 2, 2),
   new THREE.MeshBasicMaterial({ map: jsTexture })
@@ -91,7 +97,7 @@ js.position.y = 0;
 js.position.x = 4.5;
 js.position.z = 20;
 
-const nextTexture = new THREE.TextureLoader().load("next.jpeg");
+const nextTexture = new THREE.TextureLoader().load(nextURL);
 const next = new THREE.Mesh(
   new THREE.BoxGeometry(2, 2, 2),
   new THREE.MeshBasicMaterial({ map: nextTexture })
@@ -102,7 +108,7 @@ next.position.y = -5;
 next.position.x = -3;
 next.position.z = 20;
 
-const reactTexture = new THREE.TextureLoader().load("react.png");
+const reactTexture = new THREE.TextureLoader().load(reactURL);
 const react = new THREE.Mesh(
   new THREE.BoxGeometry(2, 2, 2),
   new THREE.MeshBasicMaterial({ map: reactTexture })
