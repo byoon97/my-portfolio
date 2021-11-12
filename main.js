@@ -1,6 +1,6 @@
 import "./style.css";
 import * as THREE from "three";
-import { OrbitControls } from "three/examples/jsm/controls/OrbitControls";
+import bgURL from "./bg.jpeg";
 
 // Setup
 
@@ -40,32 +40,9 @@ pointLight.position.set(5, 5, 5);
 const ambientLight = new THREE.AmbientLight(0xffffff);
 scene.add(pointLight, ambientLight);
 
-// Helpers
-
-// const lightHelper = new THREE.PointLightHelper(pointLight);
-// const gridHelper = new THREE.GridHelper(200, 50);
-// scene.add(lightHelper, gridHelper);
-
-// const controls = new OrbitControls(camera, renderer.domElement);
-
-// function addStar() {
-//   const geometry = new THREE.SphereGeometry(0.25, 24, 24);
-//   const material = new THREE.MeshStandardMaterial({ color: 0xffffff });
-//   //   const star = new THREE.Mesh(geometry, material);
-
-//   //   const [x, y, z] = Array(3)
-//   //     .fill()
-//   //     .map(() => THREE.MathUtils.randFloatSpread(100));
-
-//   //   star.position.set(x, y, z);
-//   //   scene.add(star);
-// }
-
-// Array(200).fill().forEach(addStar);
-
 // Background
 
-const spaceTexture = new THREE.TextureLoader().load("bg.jpeg");
+const spaceTexture = new THREE.TextureLoader().load(bgURL);
 scene.background = spaceTexture;
 
 // Avatar
@@ -136,32 +113,6 @@ react.position.y = -5;
 react.position.x = 3.5;
 react.position.z = 20;
 
-// const nodeTexture = new THREE.TextureLoader().load("node.png");
-// const node = new THREE.Mesh(
-//   new THREE.BoxGeometry(2, 2, 2),
-//   new THREE.MeshBasicMaterial({ map: nodeTexture })
-// );
-
-// scene.add(node);
-
-// Moon
-
-// const moonTexture = new THREE.TextureLoader().load("moon.jpg");
-// const normalTexture = new THREE.TextureLoader().load("normal.jpg");
-
-// const moon = new THREE.Mesh(
-//   new THREE.SphereGeometry(3, 32, 32),
-//   new THREE.MeshStandardMaterial({
-//     map: moonTexture,
-//     normalMap: normalTexture,
-//   })
-// );
-
-// scene.add(moon);
-
-// moon.position.z = 30;
-// moon.position.setX(-10);
-
 me.position.z = -5;
 me.position.x = 2;
 
@@ -208,10 +159,6 @@ function animate() {
   next.rotation.x += 0.01;
   next.rotation.y += 0.005;
   next.rotation.z += 0.01;
-
-  //   moon.rotation.x += 0.005;
-
-  //   controls.update();
 
   renderer.render(scene, camera);
 }

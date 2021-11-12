@@ -8,6 +8,10 @@
       src="https://kit.fontawesome.com/64efdaff5c.js"
       crossorigin="anonymous"
     ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&family=Ubuntu:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <title>Brandon's Portfolio</title>
   </head>
   <body>
@@ -22,8 +26,8 @@
         <p>
           I am a full stack web developer residing in New York City, I
           specialize in NextJS, a framework built on top of React for faster
-          loading times. I enjoy making my dream come true, and love helping
-          others achieve theirs in the digital world.
+          loading times. I enjoy making my dream come true, as well as others
+          through the digital world.
         </p>
       </blockquote>
 
@@ -75,14 +79,6 @@
           </li>
         </ul>
       </section>
-
-      <blockquote>
-        <p>
-          If you aren't afraid to fail, your're probably going to fail
-          <br /><br />-Kobe Bryant
-        </p>
-      </blockquote>
-
       <section class="left">
         <h2>Work History</h2>
 
@@ -119,13 +115,59 @@
         </ul>
       </section>
 
-      <blockquote>
-        <p>Lets Connect!</p>
-        <i class="fab fa-github"></i>
-        <i class="fa-brands fa-linkedin"></i>
-        <i class="fa-brands fa-instagram"></i>
-      </blockquote>
+      <section class="contact_section">
+        <div class="container">
+          <p class="footer_title">Lets Connect!</p>
+          <div class="footer">
+            <form
+              class="form"
+              action="mailto:byoon5397@gmail.com"
+              method="post"
+              enctype="text/plain"
+            >
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="Your name.." />
+
+              <label for="email">Email</label>
+              <input type="email" id="email" placeholder="Your email" />
+
+              <label for="subject">Subject</label>
+              <textarea
+                id="subject"
+                placeholder="Message me!"
+                style="height: 200px"
+              ></textarea>
+
+              <input type="submit" value="Submit" />
+            </form>
+            <div class="contact-details">
+              <p class="section-title">Contact Details</p>
+              <div class="info">
+                <i class="fas fa-mobile-alt"> (917)-865 6604</i><br />
+                <i class="far fa-envelope"> byoon5397@gmail.com</i>
+              </div>
+              <div class="socials">
+                <p class="section-title">Socials</p>
+                <div class="icons">
+                  <a href="https://github.com/byoon97"
+                    ><i class="fab fa-github"></i
+                  ></a>
+                  <a href="https://www.linkedin.com/in/brandon-yoon-24479715b/"
+                    ><i class="fab fa-linkedin"></i
+                  ></a>
+                  <a href=""><i class="fab fa-instagram"></i></a>
+                </div>
+              </div>
+
+              <p class="thank_you">
+                Thank you for reading! I look foward to connecting with you and
+                working with you.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
-    <script type="module" src="/main.js"></script>
+    <script type="module" src="./main.js"></script>
   </body>
 </html>
