@@ -40,19 +40,17 @@ canvas {
 }
 
   header {
+    background: var(--dark-bg);
     grid-column: 2 / span 5;
     font-size: 2.5rem;
     padding: 2rem;
     margin-bottom: var(--spacing);
-    background-color: #ffffff10;
-    backdrop-filter: blur(12px);
   }
 
   section {
     grid-column: 2 / 8;
     padding: 1rem;
-    background-color: #ffffff10;
-    backdrop-filter: blur(12px);
+    background: var(--dark-bg);
     font-size: 1.25rem;
     line-height: 1.5;
     margin-bottom: var(--spacing);
@@ -84,8 +82,7 @@ canvas {
   blockquote p {
     color: white;
     font-size: 1.5rem;
-    background-color: #ffffff10;
-    backdrop-filter: blur(12px);
+    background: var(--dark-bg);
     /* display: inline; */
     line-height: 1;
     width: 45rem;
